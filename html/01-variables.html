@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01 - OCR - Premier script - Variables</title>
+
+    <link rel="stylesheet" href="#">
+</head>
+
+
+<body>
+
+      <!-- script pour le debut du chargement -->
+  <script type="text/javascript">
+    <!--    /* <!-- Pour les vieux navigateur qui ne connaît pas JS */
+      alert('Debut du chargement de la page');
+    //-->
+    </script>
+
+    <!-- Vous remarquez que tant que la première boîte de dialogue est ouverte, la page n'est pas chargée.
+    En effet, le navigateur exécute le JS au fur et à mesure du chargement de la page : il attend donc que le script soit terminé avant de charger la suite. -->
+    
+    <h1>01 - Premier script</h1>
+
+    <a href="#" onclick="alert('Yo Peon !');">Lien</a>
+    <a href="javascript:alert('Yo Peon !');">Lien 2</a> <!-- Cette méthode a l'avantage de ne pas faire remonter le visiteur en haut de la page -->
+
+
+
+
+    <!-- Il existe d'autres événements. Leur syntaxe est la même : onevent, event étant le nom de l'événement (en minuscule)-->
+
+    <!-- En voici quelques-uns :
+
+        onclick : au clic (gauche) de la souris
+
+        ondblclick : lors d'un double clic
+
+        onmouseover : au passage de la souris
+
+        onmouseout : lorsque la souris "sort" de cet élément (en quelque sorte, le contraire de onmouseover).
+
+    Gestionnaires d'événements de la balise <body> :
+
+        onload : au chargement de la page
+
+        onunload : lorsqu'on quitte la page (ou qu'on change de page). -->
+
+
+
+
+        <!-- Dans l'en-tête ou dans le corps de la page (x)HTML -->
+
+        <!--     dans le corps de la page, sont à placer les scripts à exécuter au chargement de cette dernière (lorsque le navigateur "lira" le code, il l'exécutera en même temps).
+        C'est ce que nous allons utiliser pour cet exemple, il suffit d'écrire le code à exécuter entre les balises ;
+
+        en revanche, sont à placer dans l'en-tête les éléments qui doivent être exécutés plus tard (lors d'un événement particulier, par exemple).
+        Dans ce cas, le code n'est pas écrit "en vrac", nous apprendrons plus loin comment l'organiser. -->
+
+
+
+
+
+    <!-- script pour la fin du chargement -->
+    <script type="text/javascript">
+    <!--
+      alert('Fin du chargement de la page');
+    //-->
+    </script>
+
+
+
+    <!-- Voir fichier variables.js Ligne 84 à 87 -->
+    <script type="text/javascript">
+        <!--
+            var age = prompt("Quelle age avez vous ? (en annéee svp)"); // on demande l'age
+            alert("vous avez " + age + " ans"); // on affiche la phrase
+        //-->
+    </script>
+
+
+    <!-- Voir fichier variables.js Ligne 114 à 119 -->
+    <!-- NaN signifie Not aNumber ("Pas un nombre") -->
+    <script type="text/javascript">
+        var nbr_choisis_1 = prompt('Premier nombre ?');
+        var nbr_choisis_2 = prompt('Deuxieme nombre ?');
+
+        var resultat = nbr_choisis_1 / nbr_choisis_2;
+
+        alert('Le quotient est ' + resultat);
+
+        /*  mais avec une addition...
+        L'ordinateur va croire qu'il doit concaténer ces deux chaînes.
+        Résultat : en tapant "8" et "12", on obtient... 812 ! */
+        var resultat_addition = nbr_choisis_1 + nbr_choisis_2;
+
+        alert('résultat est ' + resultat_addition);
+    </script>
+
+
+ <!-- CONVERTIR ::  Chaîne -> Nombre --> 
+
+<!--  Rassurez-vous, il est fort heureusement possible d'effectuer "manuellement" cette conversion, grâce à 
+
+parseInt(chaine_a_convertir) (convertir en un nombre entier) 
+et à 
+
+parseFloat(chaine_a_convertir) (convertir en un nombre décimal). -->
+
+
+
+
+
+<!--  Quelques exemples vous montrant la souplesse de ces fonctions :
+
+parseInt("12.9 Euros") vaudra 12 (on convertit en entiers, les chiffres après la virgule sont ignorés)
+
+parseInt(" 12 Frs ") vaudra également 12 (l'espace en début de chaîne est ignoré)
+
+parseInt("J'ai 12 Euros") vaudra Nan (la chaîne commence par une lettre)
+
+parseFloat(" 12.9 Frs ") vaudra 12.9
+
+parseFloat("3,14") vaudra... 3 : il faut utiliser le point et non la virgule. La conversion va donc s'arrêter après le "3".  -->
+
+<!--  on convertit en nombres entier /(ou decimaux) et on calcule  -->
+    <script type="text/javascript">
+
+    var nbr_choisis_1 = prompt('Premier nombre ?');
+    var nbr_choisis_2 = prompt('Deuxieme nombre ?');
+
+    var resultat_vrai_addition = parseInt(nbr_choisis_1) + parseInt(nbr_choisis_2);
+
+    alert('La somme de ces deux nombres est ' + resultat_vrai_addition);
+    </script>
+
+
+    <!--  CONVERTIR ::  Nombre -> Chaîne  -->
+    <!-- Si je ne veux pas les calculer j'ajoute '' --> 
+        <script type="text/javascript">
+        alert("Si je ne veux pas les calculer j'ajoute ''");
+        var nombre1 = 8;
+        var nombre2 = 12;
+        alert(nombre1 + '' + nombre2);
+    </script>
+
+
+
+
+<script src="../js/02.1-fonction.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/11-style.css">
+    <title>01 - OCR - Formulaires</title>
+
+    <!-- <link rel="stylesheet" href="#"> -->
+    
+</head>
+
+
+<body>
+
+
+<div>
+
+<h1>Formulaires</h1>             <!-- onreset="return confirm('Vraiment ?'); -->
+<form method="post" action="page.php" onsubmit="return verifier(this); ">
+    <h1>Formulaire de paiement</h1>
+    <p>Les champs obligatoires sont suivis par <strong><abbr title="required">*</abbr></strong>.</p>
+
+    <section>
+        <h2>Informations de contact</h2>
+
+        <fieldset>
+          <legend>Qualité</legend>
+          <ul id="idForm">
+              <li>
+                <label for="title_1">
+                  <input type="radio" id="title_1" name="title" value="M." >
+                  Monsieur
+                </label>
+              </li>
+
+<!-- <script>
+    if(document.getElementById("idForm").title.checked)
+     alert("La case est cochee");
+else
+{
+     document.getElementById("idForm").title.checked = true;
+     alert("La case n'etait pas cochee, mais maintenant elle l'est");
+}
+</script> -->
+
+              <li>
+                <label for="title_2">
+                  <input type="radio" id="title_2" name="title" value="Mme.">
+                  Madame
+                </label>
+              </li>
+          </ul>
+        </fieldset>
+
+
+
+        <p>
+          <label for="name">
+            <span>Nom :</span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="text" id="name" name="username">
+        </p>
+
+
+
+        <p>
+          <label for="mail">
+            <span>e-mail :</span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="email" id="mail" name="usermail">
+        </p>
+
+
+
+        <p>
+          <label for="password">
+            <span>Mot de passe :</span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="password" id="pwd" name="password">
+        </p>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Informations de paiement</h2>
+        <p>
+          <label for="card">
+            <span>Type de carte :</span>
+          </label>
+          <select id="card" name="usercard">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </p>
+
+
+
+        <p>
+          <label for="number">
+            <span>Numéro :</span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+            <input type="text" id="number" name="cardnumber">
+        </p>
+
+
+
+        <p>
+          <label for="date">
+            <span>Validité :</span>
+            <strong><abbr title="required">*</abbr></strong>
+            <em>format mm/aa</em>
+          </label>
+          <input type="text" id="date" name="expiration">
+        </p>
+
+    </section>
+
+
+
+    <section>
+        <p> <button type="submit">Valider le paiement</button> </p>
+    </section>
+</form>
+
+<!-- <script>
+function verifier(f) {
+     if( /* le formulaire est bien rempli */ )
+          return true;
+     else
+     {
+          alert('Le formulaire est mal rempli');
+          return false;
+     }
+}
+</script> -->
+
+
+</div>
+
+
+
+    <script src="../js/09.02-poo.js"></script>
+</body>
+</html>
+

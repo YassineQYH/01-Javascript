@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01 - OCR - Objets HTML</title>
+
+    <!-- <link rel="stylesheet" href="#"> -->
+    
+</head>
+
+
+<body>
+
+
+<div>
+
+<h1>Objets HTML</h1>
+<button onclick="calculette()">calculatrice</button>
+</br>
+
+<img src="../images/Sylvanas.jpg" alt="Sylvanas" id="sylv">
+</br>
+<img src="../images/Roi-Liche.jpg" alt="Roi Liche" id="roiliche">
+
+<script>
+document.getElementById("sylv").onclick = function()
+{
+    alert("oui ?");
+}
+</script>
+
+
+<script>
+function quoi()
+{
+      alert("Quoi ?");
+};
+document.getElementById("roiliche").onclick = quoi;
+
+</script>
+
+</br>
+<a href="https://openclassrooms.com">OpenClassrooms</a>
+
+</div>
+
+
+<form id="formulaire" action="index.php" method="post">
+    <p>Veuillez indiquer l'âge de votre enfant. </p>
+
+
+    <p id="idnom">Quel est ton nom ? 
+        <input type="text" name="nom" />
+    </p>
+</form>
+
+<!-- <script>
+    var formulaire = document.getElementById("formulaire");
+
+    var champNom = formulaire.nom;
+
+    document.getElementById("idnom").onchange = function()
+    {
+        var input = 0;
+        if (input.value.length < 3)
+        {
+            color:red;
+        }else
+        {
+            color:green;
+        }
+    }
+    </script> -->
+
+</div>
+
+
+
+    <script src="../js/10-objets-html.js" id="idLien"></script>
+</body>
+</html>
+
